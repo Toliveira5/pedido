@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer criar gatinhos comigo?</title>
+</head>
+
+
+<body>
+    <div id="pedido">
+      <span><h2 class="frase">Aceita criar gatinhos comigo?</h2>
+      <a href="https://www.youtube.com/watch?v=R0wDhWucIxs"><button class="botao">SIM</button></a>
+      <button class="botao" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button></span>
+    </div>
+</body>
+
+<style>
+    #pedido {
+      BACKGROUND: rgb(75, 3, 93);
+      WIDTH: 100%;
+      HEIGHT: 100%;
+      POSITION: FIXED;
+      TOP: 0;
+      LEFT: 0;
+      PADDING: 20PX;
+      text-align: center;
+      padding-top: 20%;
+}
+
+    .botao {
+      background: rgb(0, 0, 0);
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 80px;
+      border-radius: 5px 
+    }
+
+    .frase {
+      color: white;
+      font-family: cursive;
+    }
+</style>
+
+<script>
+    function sim(){
+     alert("Você aceitou a namorar comigo <3")
+    }
+
+    function desvia(t){
+     var btn = t;
+     btn.style.position = 'absolute';
+     btn.style.top = posicao(10, 50);
+     btn.style.right = posicao(10, 50);
+     btn.style.left = posicao(10, 50);
+     console.log("opa, essa não!");
+    }
+
+    function posicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+
+
+</script>
+
+</html>
